@@ -1,0 +1,60 @@
+.Stopwatch {
+  /* border: 3px solid whitesmoke; */
+  padding: 10px;
+  text-align: center;
+  width: 30%;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: #227c96;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.stopwatch__display {
+  font-family: "Roboto Mono", monospace;
+  font-size: 30px;
+  color: #b3b3b3;
+}
+
+ul {
+  margin-top: 10px;
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 5px;
+  border-bottom: 1px solid #141823;
+}
+
+li:hover {
+  background-color: #f7f8f9;
+}
+
+li:last-child {
+  display: none;
+}
+
+.WorkspaceName {
+  color: #BFBFBF;
+  font-weight: bold;
+}
+
+button{
+    color: #8899A6;
+    background-color: #192734;
+    border: #227c96;
+    border-radius: 3rem;
+}

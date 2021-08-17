@@ -1,13 +1,14 @@
 import React from "react";
+import Stopwatch from "./Stopwatch";
+import TodoList from "./TodoList";
 import "./Workspace.css";
 
 function Workspace(props) {
   return (
     <div className="Workspace">
-      Workspace Name: {props.name}
-      <div className='rows'>
-        <div className='row'> Div 1</div>
-        <div className='row'> Div 2</div>
+      <div className="rowC">
+        <Stopwatch name={props.name} nameColor={props.color} />
+        <TodoList onTextChange />
       </div>
     </div>
   );
