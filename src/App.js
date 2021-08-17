@@ -11,8 +11,7 @@ function App() {
   const [cookies, setCookie] = useCookies(["app-data"]);
 
   useEffect(() => {
-    if (cookies["app-data"] && cookies["app-data"].length)
-      setAppData(cookies["app-data"]);
+    if (cookies["app-data"]) setAppData(cookies["app-data"]);
     else setCookie("app-data", sampleData);
   }, [cookies, setCookie]);
 
@@ -41,11 +40,16 @@ function App() {
     console.log(index);
   };
 
+  const handleLoadSampleDataButtonClick = () => {
+    setCookie("app-data", sampleData);
+  };
+
   console.log(cookies);
+
   return (
     <div className="App">
-      <h1 className="App-Heading"> Time Keeper</h1> 
-      {appData &&
+      <h1 className="App-Heading"> Time Keeper</h1>
+      {appData.length ? (
         appData.map((workspace, index) => (
           <Workspace
             setText={(value) => setText(value, index)}
@@ -55,8 +59,13 @@ function App() {
             textValue={workspace.text}
             key={index}
           />
-        ))}
-        <NewWorkspace addWorkspace={addWorkspace} />
+        ))
+      ) : (
+        <button onClick={handleLoadSampleDataButtonClick}>
+          Load Sample Data
+        </button>
+      )}
+      <NewWorkspace addWorkspace={addWorkspace} />
     </div>
   );
 }
