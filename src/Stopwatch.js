@@ -74,6 +74,7 @@ class Stopwatch extends React.Component {
   render() {
     return (
       <div className={"Stopwatch"}>
+        
         <h2 className={"WorkspaceName"} style={{color: this.props.nameColor}} ref="header"> {this.props.name}</h2>
 
         <StopwatchDisplay
@@ -90,7 +91,8 @@ class Stopwatch extends React.Component {
           <button onClick={this.stop}>STOP</button>
         )}
         {'  '}
-        <button onClick={this.reset}>RESET</button>
+        <button onClick={this.reset}>RESET</button> {'  '}
+        <button onClick={this.props.deleteWorkspace}> <i className="fa fa-trash" /> </button>
       </div>
     );
   }
