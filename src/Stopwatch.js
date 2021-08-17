@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import "./Stopwatch.css";
 
 class StopwatchDisplay extends React.Component {

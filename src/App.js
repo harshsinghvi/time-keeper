@@ -14,7 +14,7 @@ function App() {
     if (cookies["app-data"] && cookies["app-data"].length)
       setAppData(cookies["app-data"]);
     else setCookie("app-data", sampleData);
-  });
+  }, [cookies, setCookie]);
 
   console.log(cookies);
 
