@@ -4,13 +4,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import Workspace from "./Workspace";
 import NewWorkspace from "./NewWorkspace";
-
-const sampleText = "Fuck JavaScript !!";
-const sampleData = [
-  { name: "One 9 Tech", color: "#2596be", text: sampleText },
-  { name: "PingSafe Ai", color: "#0040ff", text: sampleText },
-  { name: "Google Cloud", color: "#4080ec", text: sampleText },
-];
+import { sampleData, sampleText } from "./sampleData";
 
 function App() {
   const [appData, setAppData] = useState([]);
