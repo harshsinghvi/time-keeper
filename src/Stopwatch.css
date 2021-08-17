@@ -59,3 +59,9 @@ button{
     border-radius: 3rem;
     padding: 10px;
 }
+
+@media (max-width: 800px) {
+  .Stopwatch {
+    width: auto;
+  }
+}
