@@ -44,7 +44,7 @@ function App() {
   console.log(cookies);
   return (
     <div className="App">
-      <h1> Time Keeper</h1> <NewWorkspace addWorkspace={addWorkspace} />
+      <h1 className="App-Heading"> Time Keeper</h1> 
       {appData &&
         appData.map((workspace, index) => (
           <Workspace
@@ -56,6 +56,7 @@ function App() {
             key={index}
           />
         ))}
+        <NewWorkspace addWorkspace={addWorkspace} />
     </div>
   );
 }
