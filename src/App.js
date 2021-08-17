@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { useCookies } from "react-cookie";
+import React, { useState } from "react";
+
+import logo from "./logo.svg";
+import "./App.css";
+import Workspace from "./workspace";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [name, setName] = useState("");
+  const [pwd, setPwd] = useState("");
+  const [cookies, setCookie] = useCookies(["user"]);
+
+  const handle = () => {
+    setCookie("Name", name, { path: "/" });
+    setCookie("Password", pwd, { path: "/" });
+  };
+  console.log(cookies);
+  return <div className="App">
+    <Workspace name="one"/> 
+    <Workspace name="one"/> 
+    <Workspace name="one"/> 
+  </div>;
 }
 
 export default App;
